@@ -1,4 +1,4 @@
-# 🧪 ADMETLab Molecule Comparison Automation
+#  ADMETLab Molecule Comparison Automation
 
 This project automates the comparison of **ADMET properties** between a **parent molecule** and **one or more child molecules** using **ADMETLab 3.0**, and generates a **scored Excel report** based on property changes (e.g., Red → Green = +2).
 
@@ -12,31 +12,40 @@ The framework is built with:
 
 ---
 
-## ✅ Prerequisites
+## Prerequisites
 
-- **Node.js** v18 or later  
-  https://nodejs.org
-
-Verify:
-```bash
-node -v
-npm -v
-```
-
----
-
-## 📦 Installation
-
-```bash
-git clone <YOUR_GIT_REPO_URL>
-cd Admet3_work
-npm install
-npx playwright install
-```
+- **Node.js** v22
+  For Windows please follow the instructions on this page:
+    https://nodejs.org/download
+  For Mac:
+     Using brew:
+       1) Install brew first if you do not have, run the following command in Terminal:
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+       2) Add brew to your paths to use in your Terminal:
+            echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+            eval "$(/opt/homebrew/bin/brew shellenv)"
+       3) Verify the brw installation by running the follwoing command in Terminal:
+            brew --version
+       4) Run the follwoing command in Terminal to install NodeJs V22:
+            brew install node@22
+       5) Verify the installation by running the following commands in Terminal:
+            node -v
+            npm -v
 
 ---
 
-## 🧬 Writing Test Scenarios (BDD)
+## Installation
+   To install run the following commands in Terminal/Powershell in order:
+     1) mkdir Projects
+     2) cd Projects
+     3) git clone <YOUR_GIT_REPO_URL>
+     4) cd admetlab3.0
+     5) npm install -D @playwright/test@latest @cucumber/cucumber@13 typescript@5.6.3 ts-node@10.9.2 @types/node
+     6) npx playwright install
+
+---
+
+## Writing Test Scenarios (BDD)
 
 Feature files live in the `features/` folder.
 
@@ -57,7 +66,8 @@ Feature: Compare ADMET properties of molecules
 
 ---
 
-## ▶️ Running the Tests
+## Running the Tests
+Run the commands below in Terminal/Powershell:
 
 ### Headless (default)
 ```bash
@@ -76,7 +86,7 @@ PWDEBUG=1 HEADLESS=false npx cucumber-js --config cucumber.js
 
 ---
 
-## 📊 Excel Output
+## Excel Output
 
 - Output file: `admet_score.xlsx`
 - Deleted automatically before each scenario
