@@ -34,7 +34,12 @@ Using Homebrew:
    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
    eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
+in some case brew can be installed to /usr/local directory then
 
+```bash
+   echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
+   eval "$(/usr/local/bin/brew shellenv)"
+```
 3. Verify the Homebrew installation:
 ```bash
    brew --version
