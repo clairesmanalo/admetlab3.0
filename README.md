@@ -20,29 +20,41 @@ The framework is built with:
   For Mac:
      Using brew:
        1) Install brew first if you do not have, run the following command in Terminal:
-            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+            ```bash
+             /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+            ```
        2) Add brew to your paths to use in your Terminal:
-            echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-            eval "$(/opt/homebrew/bin/brew shellenv)"
+           ```bash
+               echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+               eval "$(/opt/homebrew/bin/brew shellenv)"
+           ```
        3) Verify the brw installation by running the follwoing command in Terminal:
-            brew --version
+          ```bash
+               brew --version
+           ```
        4) Run the follwoing command in Terminal to install NodeJs V22:
-            brew install node@22
+            ```bash
+                brew install node@22
+             ```  
        5) Verify the installation by running the following commands in Terminal:
-            node -v
-            npm -v
+             ```bash
+                 node -v
+                 npm -v
+             ```  
+           
 
 ---
 
 ## Installation
    To install run the following commands in Terminal/Powershell in order:
-     1) mkdir Projects
-     2) cd Projects
-     3) git clone <YOUR_GIT_REPO_URL>
-     4) cd admetlab3.0
-     5) npm install -D @playwright/test@latest @cucumber/cucumber@13 typescript@5.6.3 ts-node@10.9.2 @types/node
-     6) npx playwright install
-
+    ```bash
+        mkdir Projects
+        cd Projects
+        git clone <YOUR_GIT_REPO_URL>
+        cd admetlab3.0
+        npm install -D @playwright/test@latest @cucumber/cucumber@13 typescript@5.6.3 ts-node@10.9.2 @types/node
+        npx playwright install
+     ```      
 ---
 
 ## Writing Test Scenarios (BDD)
