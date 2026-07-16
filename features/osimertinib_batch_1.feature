@@ -14,8 +14,5 @@ Feature: Molecule ADMET property comparison
       | c1(nc(ccn1)c1c2c(n(c1)C)cccc2)Nc1cc(c(cc1OCC)N(C)CCN(C)C)NC(=O)C=C |
       | c1(nc(ccn1)c1c2c(n(c1)C)cccc2)Nc1cc(c(cc1OC)N(CC)CCN(C)C)NC(=O)C=C |
       | c1(nc(ccn1)c1c2c(n(c1)C)cccc2)Nc1cc(c(cc1OC)N(C)CCN(CC)C)NC(=O)C=C |
-      | c1(nc(ccn1)c1c2c(n(c1)C)cccc2)Nc1cc(c(cc1OC)N(C)CCN(C)CC)NC(=O)C=C |
-      | c1(nc(ccn1)c1c2c(n(c1)C)cccc2)Nc1cc(c(c(c1OC)C)N(C)CCN(C)C)NC(=O)C=C |
-      | c1(nc(ccn1)c1c2c(n(c1)C)cccc2)N(c1cc(c(cc1OC)N(C)CCN(C)C)NC(=O)C=C)C |
     When I compare the ADMET properties
     Then I generate an Excel score report
